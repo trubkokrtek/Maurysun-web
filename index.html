@@ -45,65 +45,70 @@
     </header>
     <main> 
         <section id="home">
-            <div>
+            <div class="card">
                 <div>
-                    <h1>Opalování v Maurysun - <br><span>rychle, čistě, bezpečně</span></h1>
+                    <h1>Opalování v Maurysun - <br><span class="accent">Rychle, čistě, bezpečně</span></h1>
                     <p>MaurySun v Liberci je solární studio, které působí jako butikový hotel: příjemný personál, přísná hygiena, moderní technologie, férové ceny a rezervační systém, díky kterému nikdy nečekáš.</p>
                 </div>
-                <div>
-                    <div>
-                        <p>Nahlédněte dovnitř</p>
-                        <ul>
+                <div class="card__grid">
+                    <div class="card__secondary">
+                        <p class="card__secondary--header">Nahlédněte dovnitř</p>
+                        <ul class="card__secondary--list">
                             <li>Moderní a čisté prostředí butikového studia</li>
                             <li>Důraz na hygienu, klid a soukromí</li>
                             <li>Technologie pro bezpečné a komfortní opalování</li>
                         </ul>
-                        <a href="#">Prohlídka</a>
+                        <a href="#" class="card__secondary--button">Prohlídka</a>
                     </div>
-                    <div>
-                        <p>Jsme tu pro vás</p>
-                        <ul>
+                    <div class="card__secondary">
+                        <p class="card__secondary--header">Jsme tu pro vás</p>
+                        <ul class="card__secondary--list">
                             <li>Osobní přístup ke každému klientovi</li>
                             <li>Odborné poradenství podle typu pokožky</li>
                             <li>Přátelský personál a férová komunikace</li>
                         </ul>
-                        <a href="#">Kontakt</a>
+                        <a href="#" class="card__secondary--button">Kontakt</a>
                     </div>
-                    <div>
-                        <p>Váš čas, vaše volba</p>
-                        <ul>
+                    <div class="card__secondary">
+                        <p class="card__secondary--header">Váš čas, vaše volba</p>
+                        <ul class="card__secondary--list">
                             <li>Online rezervace bez zbytečného čekání</li>
                             <li>Přesný termín na minutu</li>
                             <li>Pohodlí a jistota při každé návštěvě</li>
                         </ul>
-                        <a href="#">Rezervace</a>
+                        <a href="#" class="card__secondary--button">Rezervace</a>
                     </div>
                 </div>
             </div>
-            <div>
-                <img src="https://placehold.co/600x400" alt="Studio Image"> <!-- !Placeholder Image -->
-                <div>
+            <div class="card__home--image">
+                <div class="card__img">
+                    <img src="https://placehold.co/600x400" alt="Obrázek studia" class="card__img--img"> <!-- !Placeholder Image -->
+                </div>
+                <div class="card__home--secondary">
                     <div>
-                        <p>Otevírací doba</p>
+                        <p class="card__secondary--header">Otevírací doba</p>
                         <p>PO-PÁ 10:00-18:00 *</p>
                         <p>SO-NE 13:00-18:00 *</p>
-                        <p>*Při rezervaci termínu den předem až do 20:00</p>
+                        <p class="card__secondary--sidenote">*Při rezervaci termínu den předem až do 20:00</p>
                     </div>
                     <div>
-                        <p>Otevřeno</p><!-- TODO: Dynamic state -->
+                        <p class="card__home--now">Nyní</p>
+                        <p class="card__home--monitor">OTEVŘENO</p><!-- TODO: Dynamic state -->
                     </div>
                 </div>
-                <div>
-                    <p>Výběr služeb</p>
+                <div class="card__home--selection">
+                    <p class="card__secondary--header">Výběr služeb</p>
+                    <div class="card__home--services">
                     <div>
                         <p>Ergoline 600</p>
                         <p>Ergoline Excellence 800</p>
                         <p>Soltron V-55 Turbo</p>
                     </div>
-                    <div>
-                        <p>18 Kč/min</p>
-                        <p>22 Kč/min</p>
-                        <p>23 Kč/min</p>
+                        <div>
+                            <p>18 Kč/min</p>
+                            <p>22 Kč/min</p>
+                            <p>23 Kč/min</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,14 +290,15 @@
                         <li>Zásilkovna</li>
                         <li>Balíkovna (Česká pošta)</li>
                         <li>PPL</li>
-                        <li>DHL</li>
+                        <li>GLS</li>
+                        <li>WE-DO</li>
                     </ul>
                     <p>Co u nás vyřídíte:</p>
                     <ul>
                         <li>Vyzvednutí zásilek</li>
                         <li>Podání zásilek k odeslání</li>
                     </ul>
-                    <p>Služba je dostupná v rámci standartní otevírací doby studia.</p>
+                    <p>Služba je dostupná v rámci standardní otevírací doby studia.</p>
                 </div>
             </div>
         </section>
