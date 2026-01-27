@@ -14,7 +14,6 @@
 [class^="icon--"], [class*=" icon--"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -208,9 +207,10 @@ html {
     margin: 1em 2em 0 2em;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
 }
 .card__home--secondary p{
-    margin: .5em 0;
+    margin: .5rem 0;
 }
 .card__secondary--button {
     box-sizing: border-box;
@@ -234,9 +234,6 @@ html {
 .card__secondary--list{
     margin-top: 0;
     padding-left: 1.5rem;
-}
-.card__img{
-    height: 220px;
 }
 .card__img--img {
     width: 100%;
@@ -269,4 +266,54 @@ html {
 }
 .card__home--services p{
     margin: .5em 0;
+}
+.card__secondary--alert{
+    text-align: center;
+}
+.card__header{
+    font-size: 2em;
+    font-weight: 600;
+    margin: 1rem;
+}
+.card__secondary--solarium{
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1em;
+    margin: 1em;
+    background-color: var(--secondary);
+}
+.card__solarium--button{
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: var(--tertiary);
+    color: var(--white);
+    margin: auto auto 1rem auto; /* tlačítko dolů */
+    text-align: center;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    font-size: 1.25em;
+    border-radius: 2rem;
+    width: calc(100% - 2em);
+}
+.card__solarium--header{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 1rem 1rem 0 1rem;
+    text-align: center;
+}
+.card__solarium--description{
+    margin: 0 1rem;
+    font-size: 0.75em;
+    text-align: center;
+}
+.card__solarium--list{
+    margin: 1rem;
+    padding-left: 1rem;
+}
+.card__solarium--price{
+    font-weight: 600;
+    font-size: 1.25em;
+    margin: .5rem 1rem;
+    text-align: center;
 }

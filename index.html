@@ -81,14 +81,14 @@
                 </div>
             </div>
             <div class="card__home--image">
-                <div class="card__img">
+                <div >
                     <img src="https://placehold.co/600x400" alt="Obrázek studia" class="card__img--img"> <!-- !Placeholder Image -->
                 </div>
                 <div class="card__home--secondary">
                     <div>
                         <p class="card__secondary--header">Otevírací doba</p>
-                        <p>PO-PÁ 10:00-18:00 *</p>
-                        <p>SO-NE 13:00-18:00 *</p>
+                        <p>PO-PÁ 10:00-18:00<span class="card__secondary--sidenote">*</span></p>
+                        <p>SO-NE 13:00-18:00<span class="card__secondary--sidenote">*</span></p>
                         <p class="card__secondary--sidenote">*Při rezervaci termínu den předem až do 20:00</p>
                     </div>
                     <div>
@@ -113,61 +113,62 @@
                 </div>
             </div>
         </section>
-        <section id="alerts">
+        <section id="alerts" class="card">
             <div>
-                <div>
-                    <p>Nová otevírací doba od 02/2026 </p>
+                <div class="card__secondary card__secondary--alert">
+                    <p class="card__secondary--header">Nová otevírací doba od 02/2026 </p>
                     <p>Po-Pá&#9;10:00-18:00 při rezervaci do 20:00</p>
                     <p>So-Ne&#9;13:00-18:00 při rezervaci do 20:00</p>
                 </div>
-                <div>
-                    <p>Ve všední dny<br><span>HAPPY HOUR</span>10:30- 12:30<br>-25%</p>
+                <div class="card__secondary card__secondary--alert">
+                    <p class="card__secondary--header">Ve všední dny<br><span class="accent">HAPPY HOUR</span>&nbsp;-&nbsp;10:30-12:30<br>-25%</p>
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="services" class="card">
+            <p class="card__header">Nabídka služeb</p>
             <div>
-                <div>
-                    <img src="https://placehold.co/496x320" alt="Solarium"> <!-- !Placeholder Image -->
-                    <p>Ergoline 600</p>
-                    <p>Komfortní lehací solárium</p>
-                    <ul>
+                <div class="card__secondary--solarium">
+                    <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
+                    <p class="card__solarium--header">Ergoline 600</p>
+                    <p class="card__solarium--description">Komfortní lehací solárium</p>
+                    <ul class="card__solarium--list">
                         <li>Vyvážený výkon vhodný pro pravidelné opalování</li>
                         <li>Rovnoměrné rozložení UV záření</li>
                         <li>Pohodlné lehací provedení</li>
                         <li>Vhodné i pro začátečníky</li>
                         <li>Klidné a komfortní opalování</li>
                     </ul>
-                    <p>18 Kč/min</p>
-                    <a href="#">Objednat se</a>
+                    <p class="card__solarium--price">18 Kč/min</p>
+                    <a href="#" class="card__solarium--button">Objednat se</a>
                 </div>
-                <div>
-                    <img src="https://placehold.co/496x320" alt="Solarium"> <!-- !Placeholder Image -->
-                    <p>Ergoline Excellence 800</p>
-                    <p>Prémiové lehací solárium</p>
-                    <ul>
+                <div class="card__secondary--solarium">
+                    <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
+                    <p class="card__solarium--header">Ergoline Excellence 800</p>
+                    <p class="card__solarium--description">Prémiové lehací solárium</p>
+                    <ul class="card__solarium--list">
                         <li>Vyšší výkon pro rychlejší výsledky</li>
                         <li>Moderní technologie pro rovnoměrné opálení</li>
                         <li>Kratší doba opalování při stejném efektu</li>
                         <li>Komfortní lehátko s lepší ergonomií</li>
                         <li>Ideální pro náročnější klienty</li>
                     </ul>
-                    <p>22 Kč/min</p>
-                    <a href="#">Objednat se</a>
+                    <p class="card__solarium--price">22 Kč/min</p>
+                    <a href="#" class="card__solarium--button">Objednat se</a>
                 </div>
-                <div>
-                    <img src="https://placehold.co/496x320" alt="Solarium"> <!-- !Placeholder Image -->
-                    <p>Soltron V-55 Turbo</p>
-                    <p>Stojací solárium</p>
-                    <ul>
+                <div class="card__secondary--solarium">
+                    <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
+                    <p class="card__solarium--header">Soltron V-55 Turbo</p>
+                    <p class="card__solarium--description">Stojací solárium</p>
+                    <ul class="card__solarium--list">
                         <li>Velmi rychlé a intenzivní opalování</li>
                         <li>Rovnoměrný účinek bez stínů</li>
                         <li>Bezkontaktní řešení - maximální hygiena</li>
                         <li>Kratší doba opalování</li>
                         <li>Vhodné pro zkušenější klienty</li>
                     </ul>
-                    <p>23 Kč/min</p>
-                    <a href="#">Objednat se</a>
+                    <p class="card__solarium--price">23 Kč/min</p>
+                    <a href="#" class="card__solarium--button">Objednat se</a>
                 </div>
             </div>
         </section>
@@ -175,16 +176,16 @@
             <div>
                 <div>
                     <!-- !Placeholder Video <video></video> -->
-                    <img src="https://placehold.co/640x360" alt="Solarium">
+                    <img src="https://placehold.co/640x360" alt="Solarium" class="img">
                 </div>
                 <div>
-                    <img src="https://placehold.co/532x288" alt="Solarium"><!-- !Placeholder Image -->
+                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
                 </div>
                 <div>
-                    <img src="https://placehold.co/532x288" alt="Solarium"><!-- !Placeholder Image -->
+                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
                 </div>
                 <div>
-                    <img src="https://placehold.co/532x288" alt="Solarium"><!-- !Placeholder Image -->
+                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
                 </div>
             </div>
         </section>
@@ -269,7 +270,7 @@
                     <p>Dostupné přímo na recepci studia.</p>
                 </div>
                 <div>
-                    <img src="https://placehold.co/532x288" alt="Solarium"><!-- !Placeholder Image -->
+                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
                 </div>
                 <div>
                     <p>Solární kosmetika</p>
