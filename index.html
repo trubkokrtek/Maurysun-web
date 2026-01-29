@@ -93,7 +93,8 @@
                     </div>
                     <div>
                         <p class="card__home--now  margin__small">Nyní</p>
-                        <p class="card__home--monitor  margin__small">OTEVŘENO</p><!-- TODO: Dynamic state -->
+                        <p class="card__home--open  margin__small" id="open">OTEVŘENO</p>
+                        <p class="card__home--closed  margin__small" id="closed">ZAVŘENO</p>
                     </div>
                 </div>
                 <div class="card__home--selection">
@@ -201,29 +202,31 @@
         <section id="reviews">
             <div class="card">
                 <p class="card__header">Zkušenosti našich klientů</p>
-                <div class="card__secondary">
-                    <div class="card__secondary--review">
-                        <p class="card__review--name">Petra K.</p>
-                        <p class="icon--star-full"> </p>
+                <div class="reviews">
+                    <div class="card__secondary">
+                        <div class="card__secondary--review">
+                            <p class="card__review--name">Petra K.</p>
+                            <p class="icon--star-full"> </p>
+                        </div>
+                        <p>„Čisté a klidné prostředí, velmi příjemná obsluha. Všechno mi bylo vysvětleno a opalování bylo naprosto v pohodě.“</p>
+                        <a href="https://www.google.com/search?sxsrf=ANbL-n49iB_XtfmeU4AUcjBnjIA7_bCaVQ:1769689059647&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOfGeAdbzKQ-x6PENVXeVig3Sn086Ss3AFWhbOHafA1FMsZ1PUcRDvtUOHhVeFb7awq79gUpqEnaOCvnBL9L8n6YRtS5dSVp9uvh62nKsu_586Toaag%3D%3D&q=Sol%C3%A1rn%C3%AD+studio+Maury+Sun+Recenze&aic=0" class="card__review--link">Recenze na google</a>
                     </div>
-                    <p>„Čisté a klidné prostředí, velmi příjemná obsluha. Všechno mi bylo vysvětleno a opalování bylo naprosto v pohodě.“</p>
-                    <a href="https://www.google.com/search?sxsrf=ANbL-n49iB_XtfmeU4AUcjBnjIA7_bCaVQ:1769689059647&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOfGeAdbzKQ-x6PENVXeVig3Sn086Ss3AFWhbOHafA1FMsZ1PUcRDvtUOHhVeFb7awq79gUpqEnaOCvnBL9L8n6YRtS5dSVp9uvh62nKsu_586Toaag%3D%3D&q=Sol%C3%A1rn%C3%AD+studio+Maury+Sun+Recenze&aic=0" class="card__review--link">Recenze na google</a>
-                </div>
-                <div class="card__secondary">
-                    <div class="card__secondary--review">
-                        <p class="card__review--name">Martin D.</p>
-                        <p class="icon--star-full"> </p>
+                    <div class="card__secondary">
+                        <div class="card__secondary--review">
+                            <p class="card__review--name">Martin D.</p>
+                            <p class="icon--star-full"> </p>
+                        </div>
+                        <p>„Moderní solárium, žádné čekání a perfektní hygiena. Určitě se budu vracet.“</p>
+                        <a href="https://www.facebook.com/people/Sol%C3%A1rn%C3%AD-studio-MAURY-SUN/100063503592418/?sk=reviews" class="card__review--link">Recenze na Facebook</a>
                     </div>
-                    <p>„Moderní solárium, žádné čekání a perfektní hygiena. Určitě se budu vracet.“</p>
-                    <a href="https://www.facebook.com/people/Sol%C3%A1rn%C3%AD-studio-MAURY-SUN/100063503592418/?sk=reviews" class="card__review--link">Recenze na Facebook</a>
-                </div>
-                <div class="card__secondary">
-                    <div class="card__secondary--review">
-                        <p class="card__review--name">Lucie S.</p>
-                        <p class="icon--star-full"> </p>
+                    <div class="card__secondary">
+                        <div class="card__secondary--review">
+                            <p class="card__review--name">Lucie S.</p>
+                            <p class="icon--star-full"> </p>
+                        </div>
+                        <p>„Nejlepší solární studio v Liberci. Klid, čistota a profesionální přístup.“</p>
+                        <a href="https://www.firmy.cz/detail/2266618-maury-sun-liberec-ii-nove-mesto.html#hodnoceni" class="card__review--link">Recenze na firmy.cz</a>
                     </div>
-                    <p>„Nejlepší solární studio v Liberci. Klid, čistota a profesionální přístup.“</p>
-                    <a href="https://www.firmy.cz/detail/2266618-maury-sun-liberec-ii-nove-mesto.html#hodnoceni" class="card__review--link">Recenze na firmy.cz</a>
                 </div>
             </div>
         </section>
@@ -350,9 +353,31 @@
             <a href="https://www.instagram.com/solarni_studio_maury_sun/?hl=cs" class="link__nodecoration"><span class="icon--instagram"> </span></a>
             <a href="https://www.facebook.com/p/Sol%C3%A1rn%C3%AD-studio-MAURY-SUN-100063503592418/" class="link__nodecoration"><span class="icon--facebook"> </span></a>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js"></script>
         <script>
         const toggle = document.getElementById("hamburger__button");
         const nav = document.getElementById("header__nav");
+        var time = luxon.DateTime.now().setZone('Europe/Prague').toJSDate();
+        console.log(time);
+        console.log(time.getHours());
+        if(time.getDay() > 0 && time.getDay() < 6){ // Weekday
+            if(time.getHours() >=10 && time.getHours() <18){
+                document.getElementById("open").style.display = "block";
+                document.getElementById("closed").style.display = "none";
+            } else {
+                document.getElementById("open").style.display = "none";
+                document.getElementById("closed").style.display = "block";
+            }
+        } else { // Weekend
+            if(time.getHours() >=13 && time.getHours() <18){
+                document.getElementById("open").style.display = "block";
+                document.getElementById("closed").style.display = "none";
+            } else {
+                document.getElementById("open").style.display = "none";
+                document.getElementById("closed").style.display = "block";
+            }
+
+        }
 
         toggle.addEventListener("click", () => {
             nav.classList.toggle("active");
