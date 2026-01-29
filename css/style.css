@@ -70,6 +70,7 @@ html {
     scroll-behavior: smooth;
 }
 .main{
+    margin: 0 auto;
     max-width: 1920px;
 }
 .img{
@@ -527,11 +528,23 @@ html {
         max-width: 50%;
     }
     .footer{
-        display: flex;
-        justify-content: space-around;
+        display: grid;
         align-items: center;
         margin: 0;
         box-sizing: border-box;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .footer__left{
+        justify-self: start;
+        margin-left: 1em;
+    }
+    .footer__right{
+        justify-self: end;
+        margin-right: 1em;
+    }
+    .footer__links{
+        justify-self: center;
     }
     .reviews{
         display: grid;
