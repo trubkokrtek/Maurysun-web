@@ -12,28 +12,28 @@
 <body>
     <header class="header">
         <div class="header__logo">
-            <img src="https://placehold.co/64x64" alt="Logo"><!-- !Logo Placeholder  -->
-            <p text="header__logo--logo"><span class="header__logo--name"><span class="logo__accent">Maurysun</span>&nbsp;Liberec</span><br>&#9;Solární studio · opalování</p>
+            <a href="#home"><img src="https://placehold.co/64x64" alt="Logo"></a><!-- !Logo Placeholder  -->
+            <p class="header__logo--logo"><span class="header__logo--name"><span class="logo__accent">Maurysun</span>&nbsp;Liberec</span><br>&#9;Solární studio · opalování</p>
         </div>
         <div>
             <nav class="header__nav" id="header__nav">
                 <ul>
-                    <li><a href="#" class="header__nav--item">Služby</a></li>
-                    <li><a href="#" class="header__nav--item">Galerie</a></li>
-                    <li><a href="#" class="header__nav--item">Recenze</a></li>
-                    <li><a href="#" class="header__nav--item">FAQ</a></li>
-                    <li><a href="#" class="header__nav--item">Další informace</a></li>
-                    <li><a href="#" class="header__nav--item">Kontakt</a></li>
+                    <li><a href="#services" class="header__nav--item">Služby</a></li>
+                    <li><a href="#gallery" class="header__nav--item">Galerie</a></li>
+                    <li><a href="#reviews" class="header__nav--item">Recenze</a></li>
+                    <li><a href="#faq" class="header__nav--item">FAQ</a></li>
+                    <li><a href="#alerts" class="header__nav--item">Další informace</a></li> <!-- ?Alerts/Additions -->
+                    <li><a href="#contact" class="header__nav--item">Kontakt</a></li>
                 </ul>
                 <div class="nav__actions">
-                    <a href="#" class="button"> <span class="icon--phone"></span> Zavolat</a>
-                    <a href="#" class="button">Rezervovat</a>
+                    <a href="tel:+420723316077" class="button"> <span class="icon--phone"></span> Zavolat</a>
+                    <a href="https://maurysun.reservio.com/" class="button">Rezervovat</a>
                 </div>
             </nav>
         </div>
         <div class="header__actions">
-            <a href="#" class="button"><span class="icon--phone"></span> Zavolat</a>
-            <a href="#" class="button">Rezervovat</a>
+            <a href="tel:+420723316077" class="button"><span class="icon--phone"></span> Zavolat</a>
+            <a href="https://maurysun.reservio.com/" class="button">Rezervovat</a>
         </div>
         <div class="header__hamburger">
             <button id="hamburger__button" class="hamburger__button" aria-label="Toggle menu">
@@ -43,9 +43,9 @@
             </button>
         </div>
     </header>
-    <main> 
-        <section id="home">
-            <div class="card">
+    <main class="main"> 
+        <section id="home" class="home">
+            <div class="card card__intro">
                 <div>
                     <h1>Opalování v Maurysun - <br><span class="accent">Rychle, čistě, bezpečně</span></h1>
                     <p>MaurySun v Liberci je solární studio, které působí jako butikový hotel: příjemný personál, přísná hygiena, moderní technologie, férové ceny a rezervační systém, díky kterému nikdy nečekáš.</p>
@@ -58,7 +58,7 @@
                             <li>Důraz na hygienu, klid a soukromí</li>
                             <li>Technologie pro bezpečné a komfortní opalování</li>
                         </ul>
-                        <a href="#" class="card__secondary--button">Prohlídka</a>
+                        <a href="#gallery" class="card__secondary--button">Prohlídka</a>
                     </div>
                     <div class="card__secondary">
                         <p class="card__secondary--header">Jsme tu pro vás</p>
@@ -67,7 +67,7 @@
                             <li>Odborné poradenství podle typu pokožky</li>
                             <li>Přátelský personál a férová komunikace</li>
                         </ul>
-                        <a href="#" class="card__secondary--button">Kontakt</a>
+                        <a href="#contact" class="card__secondary--button">Kontakt</a>
                     </div>
                     <div class="card__secondary">
                         <p class="card__secondary--header">Váš čas, vaše volba</p>
@@ -76,7 +76,7 @@
                             <li>Přesný termín na minutu</li>
                             <li>Pohodlí a jistota při každé návštěvě</li>
                         </ul>
-                        <a href="#" class="card__secondary--button">Rezervace</a>
+                        <a href="https://maurysun.reservio.com/" class="card__secondary--button">Rezervace</a>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,7 @@
         </section>
         <section id="services" class="card">
             <p class="card__header">Nabídka služeb</p>
-            <div>
+            <div class="services">
                 <div class="card__secondary--solarium">
                     <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
                     <p class="card__solarium--header">Ergoline 600</p>
@@ -139,8 +139,10 @@
                         <li>Vhodné i pro začátečníky</li>
                         <li>Klidné a komfortní opalování</li>
                     </ul>
-                    <p class="card__solarium--price">18 Kč/min</p>
-                    <a href="#" class="card__solarium--button">Objednat se</a>
+                    <div class="card__price">
+                        <p class="card__solarium--price">18 Kč/min</p>
+                        <a href="https://maurysun.reservio.com/" class="card__solarium--button">Objednat se</a>
+                    </div>
                 </div>
                 <div class="card__secondary--solarium">
                     <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
@@ -153,8 +155,10 @@
                         <li>Komfortní lehátko s lepší ergonomií</li>
                         <li>Ideální pro náročnější klienty</li>
                     </ul>
-                    <p class="card__solarium--price">22 Kč/min</p>
-                    <a href="#" class="card__solarium--button">Objednat se</a>
+                    <div class="card__price">
+                        <p class="card__solarium--price">22 Kč/min</p>
+                        <a href="https://maurysun.reservio.com/" class="card__solarium--button">Objednat se</a>
+                    </div>
                 </div>
                 <div class="card__secondary--solarium">
                     <img src="https://placehold.co/496x320" alt="Solarium" class="img"> <!-- !Placeholder Image -->
@@ -167,26 +171,30 @@
                         <li>Kratší doba opalování</li>
                         <li>Vhodné pro zkušenější klienty</li>
                     </ul>
-                    <p class="card__solarium--price">23 Kč/min</p>
-                    <a href="#" class="card__solarium--button">Objednat se</a>
+                    <div class="card__price">
+                        <p class="card__solarium--price">23 Kč/min</p>
+                        <a href="https://maurysun.reservio.com/" class="card__solarium--button">Objednat se</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="galery">
+        <section id="gallery">
             <div class="card">
                 <p class="card__header">Galerie</p>
-                <div class="gallery__image">
-                    <!-- !Placeholder Video <video></video> -->
-                    <img src="https://placehold.co/640x360" alt="Solarium" class="img">
-                </div>
-                <div class="gallery__image">
-                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
-                </div>
-                <div class="gallery__image">
-                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
-                </div>
-                <div class="gallery__image">
-                    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
+                <div class="gallery">
+                    <div class="gallery__image video">
+                        <!-- !Placeholder Video <video></video> -->
+                        <img src="https://placehold.co/640x360" alt="Solarium" class="img">
+                    </div>
+                    <div class="gallery__image">
+                        <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
+                    </div>
+                    <div class="gallery__image">
+                        <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
+                    </div>
+                    <div class="gallery__image">
+                        <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,7 +207,7 @@
                         <p class="icon--star-full"> </p>
                     </div>
                     <p>„Čisté a klidné prostředí, velmi příjemná obsluha. Všechno mi bylo vysvětleno a opalování bylo naprosto v pohodě.“</p>
-                    <a href="#" class="card__review--link">Recenze na google</a>
+                    <a href="https://www.google.com/search?sxsrf=ANbL-n49iB_XtfmeU4AUcjBnjIA7_bCaVQ:1769689059647&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOfGeAdbzKQ-x6PENVXeVig3Sn086Ss3AFWhbOHafA1FMsZ1PUcRDvtUOHhVeFb7awq79gUpqEnaOCvnBL9L8n6YRtS5dSVp9uvh62nKsu_586Toaag%3D%3D&q=Sol%C3%A1rn%C3%AD+studio+Maury+Sun+Recenze&aic=0" class="card__review--link">Recenze na google</a>
                 </div>
                 <div class="card__secondary">
                     <div class="card__secondary--review">
@@ -207,7 +215,7 @@
                         <p class="icon--star-full"> </p>
                     </div>
                     <p>„Moderní solárium, žádné čekání a perfektní hygiena. Určitě se budu vracet.“</p>
-                    <a href="#" class="card__review--link">Recenze na Facebook</a>
+                    <a href="https://www.facebook.com/people/Sol%C3%A1rn%C3%AD-studio-MAURY-SUN/100063503592418/?sk=reviews" class="card__review--link">Recenze na Facebook</a>
                 </div>
                 <div class="card__secondary">
                     <div class="card__secondary--review">
@@ -215,45 +223,47 @@
                         <p class="icon--star-full"> </p>
                     </div>
                     <p>„Nejlepší solární studio v Liberci. Klid, čistota a profesionální přístup.“</p>
-                    <a href="#" class="card__review--link">Recenze na firmy.cz</a>
+                    <a href="https://www.firmy.cz/detail/2266618-maury-sun-liberec-ii-nove-mesto.html#hodnoceni" class="card__review--link">Recenze na firmy.cz</a>
                 </div>
             </div>
         </section>
-        <section id="faq"> <!-- TODO: Rozklikávání-->
+        <section id="faq">
             <div class="card">
                 <p class="card__header">FAQ - často kladené otázky</p>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Musím se objednat předem?</summary>
-                    <p class="card__faq--details">Objednání předem doporučujeme, abyste měli jistotu volného termínu. Bez rezervace je možné přijít dle aktuální dostupnosti.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Jak se mám na opalování připravit?</summary>
-                    <p>Doporučujeme přijít bez make-upu, parfémů a deodorantů. Použití solární kosmetiky je vhodné a zvyšuje komfort opalování.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Jak dlouho trvá opalování?</summary>
-                    <p>Délka opalování se liší podle typu pokožky a zvoleného solária. Doporučený čas vám vždy ochotně nastaví personál.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Jak často mohu chodit do solária?</summary>
-                    <p>Obvykle se doporučuje rozestup alespoň 48 hodin mezi návštěvami. Vše záleží na typu pokožky a intenzitě opalování.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Je solárium vhodné i pro začátečníky?</summary>
-                    <p>Ano, naše solárium je vhodné i pro začátečníky doporučujeme kratší dobu opalování a lehací solárium s nižším výkonem. Rádi vám poradíme.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Je u vás dodržována hygiena?</summary>
-                    <p>Ano, čistota a hygiena jsou pro nás prioritou. Solária jsou pravidelně čištěna a dezinfikována po každém použití.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Mohu u vás platit kartou?</summary>
-                    <p>Ano, platba kartou je u nás možná. Samozřejmostí je také platba v hotovosti.</p>
-                </details>
-                <details class="card__faq">
-                    <summary class="card__faq--summary">Nabízíte dárkové poukazy nebo balíčky?</summary>
-                    <p>Ano, nabízíme dárkové poukazy i výhodné časové balíčky. Více informací vám rádi poskytneme na recepci.</p>
-                </details>
+                <div class="faq">
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Musím se objednat předem?</summary>
+                        <p class="card__faq--details">Objednání předem doporučujeme, abyste měli jistotu volného termínu. Bez rezervace je možné přijít dle aktuální dostupnosti.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Jak se mám na opalování připravit?</summary>
+                        <p>Doporučujeme přijít bez make-upu, parfémů a deodorantů. Použití solární kosmetiky je vhodné a zvyšuje komfort opalování.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Jak dlouho trvá opalování?</summary>
+                        <p>Délka opalování se liší podle typu pokožky a zvoleného solária. Doporučený čas vám vždy ochotně nastaví personál.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Jak často mohu chodit do solária?</summary>
+                        <p>Obvykle se doporučuje rozestup alespoň 48 hodin mezi návštěvami. Vše záleží na typu pokožky a intenzitě opalování.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Je solárium vhodné i pro začátečníky?</summary>
+                        <p>Ano, naše solárium je vhodné i pro začátečníky doporučujeme kratší dobu opalování a lehací solárium s nižším výkonem. Rádi vám poradíme.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Je u vás dodržována hygiena?</summary>
+                        <p>Ano, čistota a hygiena jsou pro nás prioritou. Solária jsou pravidelně čištěna a dezinfikována po každém použití.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Mohu u vás platit kartou?</summary>
+                        <p>Ano, platba kartou je u nás možná. Samozřejmostí je také platba v hotovosti.</p>
+                    </details>
+                    <details class="card__faq">
+                        <summary class="card__faq--summary">Nabízíte dárkové poukazy nebo balíčky?</summary>
+                        <p>Ano, nabízíme dárkové poukazy i výhodné časové balíčky. Více informací vám rádi poskytneme na recepci.</p>
+                    </details>
+                </div>
             </div>
         </section>
         <section id="additions">
@@ -271,7 +281,7 @@
                     <p class="card__review--link">Dostupné přímo na recepci studia.</p>
                 </div>
                 <!-- <div> -->
-                <!--    <img src="https://placehold.co/532x288" alt="Solarium" class="img"><!-- !Placeholder Image -->
+                <!--    <img src="https://placehold.co/532x288" alt="Solarium" class="img"> Placeholder Image
                 <!-- </div> -->
                 <div class="card__secondary">
                     <p class="card__secondary--header">Solární kosmetika</p>
@@ -304,8 +314,8 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <div class="card">
+        <section id="contact" class="section__contact">
+            <div class="card contact">
                 <p class="card__header">Kontakt</p>
                 <div class="card__secondary">
                     <p class="card__secondary--header margin__small">Adresa</p>
@@ -321,7 +331,7 @@
                     <p class="margin__small">So-Ne&#9;13:00-18:00 při rezervaci do 20:00</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card map">
                 <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Sol%C3%A1rn%C3%AD%20studio%20Maury%20Sun%2C%20n%C3%A1m%C4%9Bst%C3%AD%20Sokolovsk%C3%A9%2C%20Liberec-Nov%C3%A9%20M%C4%9Bsto%2C%20%C4%8Cesko&maptype=roadmap" class="card__map" allowfullscreen></iframe>
             </div>
         </section>
@@ -333,12 +343,12 @@
         </div>
         <div class="footer__links">
             <p>Domů · Služby · Galerie · Recenze · FAQ · Další informace · Kontakt</p>
-            <p>Umělé opalování · Cookies</p>
+            <a href="#" class="link__nodecoration">Umělé opalování · Cookies</a> <!-- !second page-->
         </div>
         <div>
-            <span class="icon--tiktok"> </span><!-- !Vector Placeholder -->
-            <span class="icon--instagram"> </span><!-- !Vector Placeholder -->
-            <span class="icon--facebook"> </span><!-- !Vector Placeholder -->
+            <a href="#" class="link__nodecoration"><span class="icon--tiktok"> </span></a>
+            <a href="https://www.instagram.com/solarni_studio_maury_sun/?hl=cs" class="link__nodecoration"><span class="icon--instagram"> </span></a>
+            <a href="https://www.facebook.com/p/Sol%C3%A1rn%C3%AD-studio-MAURY-SUN-100063503592418/" class="link__nodecoration"><span class="icon--facebook"> </span></a>
         </div>
         <script>
         const toggle = document.getElementById("hamburger__button");
@@ -346,6 +356,11 @@
 
         toggle.addEventListener("click", () => {
             nav.classList.toggle("active");
+        });
+        nav.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+            nav.classList.remove("active");
+        } 
         });
         </script>
 
