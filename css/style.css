@@ -384,11 +384,11 @@ html {
 .card__faq[open] {
     background: var(--secondary);
 }
-.card__faq--summary::after {
+.card__faq--summary::before {
     content: "❱";
     font-size: 1.2rem;
     transition: transform 0.25s ease;
-    margin-left: .5rem;
+    margin-right: .5rem;
     display: inline-block ;
 }
 .card__faq--summary:focus {
@@ -396,7 +396,7 @@ html {
     user-select: none;
 }
 
-.card__faq[open] .card__faq--summary::after {
+.card__faq[open] .card__faq--summary::before {
     transform: rotate(90deg);
 }
 .card__additions--header{
