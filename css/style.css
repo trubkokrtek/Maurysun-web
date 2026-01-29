@@ -538,13 +538,17 @@ html {
     .footer__left{
         justify-self: start;
         margin-left: 1em;
+        text-align: center;
     }
     .footer__right{
         justify-self: end;
-        margin-right: 1em;
+        margin-right: 1rem;
+        text-align: center;
+        font-size: 2em;
     }
     .footer__links{
         justify-self: center;
+        text-align: center;
     }
     .reviews{
         display: grid;
